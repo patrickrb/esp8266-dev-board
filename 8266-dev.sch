@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:8266-dev-cache
 EELAYER 29 0
 EELAYER END
 $Descr A4 11693 8268
@@ -14,25 +15,12 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ESP8266-12E_ESP-12E:ESP8266-12F_ESP-12F U1
-U 1 1 5CE25A73
-P 4550 5200
-F 0 "U1" H 4550 6067 50  0000 C CNN
-F 1 "ESP8266-12F_ESP-12F" H 4550 5976 50  0000 C CNN
-F 2 "ESP8266-12E_ESP-12E:XCVR_ESP8266-12E%2fESP-12E" H 3850 4050 50  0001 L BNN
-F 3 "" H 4300 3800 50  0001 L BNN
-F 4 "None" H 4300 3800 50  0001 L BNN "Field4"
-F 5 "This WiFi module has a 32-bit MCU micro and clock speeds supporting 80 MHz or 160 MHz. Supports the RTOS and integrated Wi-Fi MAC/BB/RF/PA/LNA, and has an on-board antenna." H 750 3500 50  0001 L BNN "Field8"
-	1    4550 5200
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Battery BT1
 U 1 1 5CE2A5C3
 P 2250 5200
 F 0 "BT1" H 2358 5246 50  0000 L CNN
 F 1 "Battery" H 2358 5155 50  0000 L CNN
-F 2 "" V 2250 5260 50  0001 C CNN
+F 2 "Battery:BatteryHolder_MPD_BC2003_1x2032" V 2250 5260 50  0001 C CNN
 F 3 "~" V 2250 5260 50  0001 C CNN
 	1    2250 5200
 	1    0    0    -1  
@@ -47,7 +35,7 @@ U 1 1 5CE33EC7
 P 3750 5450
 F 0 "C2" H 3865 5496 50  0000 L CNN
 F 1 "100nF" H 3865 5405 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 3788 5300 50  0001 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 3788 5300 50  0001 C CNN
 F 3 "~" H 3750 5450 50  0001 C CNN
 	1    3750 5450
 	1    0    0    -1  
@@ -101,17 +89,6 @@ Wire Wire Line
 Wire Wire Line
 	3350 4800 3850 4800
 $Comp
-L Device:R R3
-U 1 1 5CE3A4C5
-P 5750 5000
-F 0 "R3" V 5543 5000 50  0000 C CNN
-F 1 "10K" V 5634 5000 50  0000 C CNN
-F 2 "Resistor_SMD:R_1206_3216Metric" V 5680 5000 50  0001 C CNN
-F 3 "~" H 5750 5000 50  0001 C CNN
-	1    5750 5000
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R4
 U 1 1 5CE3B03F
 P 5750 5200
@@ -123,29 +100,7 @@ F 3 "~" H 5750 5200 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	5600 5000 5250 5000
-Wire Wire Line
 	5250 5200 5600 5200
-Wire Wire Line
-	5900 5000 6100 5000
-Wire Wire Line
-	6100 5000 6100 4800
-NoConn ~ 5250 4800
-NoConn ~ 5250 4900
-NoConn ~ 5250 5100
-NoConn ~ 3850 4700
-NoConn ~ 3850 4900
-NoConn ~ 3850 5000
-NoConn ~ 3850 5100
-NoConn ~ 3850 5200
-NoConn ~ 4300 5650
-NoConn ~ 4400 5650
-NoConn ~ 4500 5650
-NoConn ~ 4600 5650
-NoConn ~ 4700 5650
-NoConn ~ 4800 5650
-Wire Wire Line
-	2250 4400 2650 4400
 Wire Wire Line
 	2250 5400 2250 5750
 $Comp
@@ -202,26 +157,6 @@ Wire Wire Line
 	5900 5300 5900 5550
 Connection ~ 5900 5300
 Wire Wire Line
-	6100 4400 6100 4250
-Wire Wire Line
-	6100 4250 5800 4250
-$Comp
-L 430152070826:430152070826 S1
-U 1 1 5CE6DF3C
-P 6300 4600
-F 0 "S1" V 6346 4323 50  0000 R CNN
-F 1 "430152070826" V 6255 4323 50  0000 R CNN
-F 2 "430152070826:430152070826" H 6300 4600 50  0001 L BNN
-F 3 "" H 6300 4600 50  0001 L BNN
-F 4 "None" H 6300 4600 50  0001 L BNN "Field4"
-F 5 "Unavailable" H 6300 4600 50  0001 L BNN "Field5"
-F 6 "Switch Tactile Spst-no 0.05A 12V" H 6300 4600 50  0001 L BNN "Field6"
-F 7 "None" H 6300 4600 50  0001 L BNN "Field7"
-F 8 "Wurth Electronics" H 6300 4600 50  0001 L BNN "Field8"
-	1    6300 4600
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
 	6500 4800 6500 5000
 $Comp
 L power:GND #PWR0105
@@ -234,359 +169,186 @@ F 3 "" H 6500 5000 50  0001 C CNN
 	1    6500 5000
 	1    0    0    -1  
 $EndComp
-NoConn ~ 6500 4400
+NoConn ~ 6500 4600
 Text Notes 7350 7500 0    50   ~ 0
 ESP8266 base schematic
 Text Notes 7000 6650 0    50   ~ 0
 Created by: Patrick (jigglebilly) Burns
 Text Notes 8150 7650 0    50   ~ 0
 5/18/19
-$Comp
-L Connector:USB_B_Micro J1
-U 1 1 5CE71999
-P 2700 2650
-F 0 "J1" H 2757 3117 50  0000 C CNN
-F 1 "USB_B_Micro" H 2757 3026 50  0000 C CNN
-F 2 "" H 2850 2600 50  0001 C CNN
-F 3 "~" H 2850 2600 50  0001 C CNN
-	1    2700 2650
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0106
-U 1 1 5CE7B53F
-P 2500 1450
-F 0 "#PWR0106" H 2500 1300 50  0001 C CNN
-F 1 "VCC" H 2517 1623 50  0000 C CNN
-F 2 "" H 2500 1450 50  0001 C CNN
-F 3 "" H 2500 1450 50  0001 C CNN
-	1    2500 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0107
-U 1 1 5CE7C688
-P 2850 1450
-F 0 "#PWR0107" H 2850 1300 50  0001 C CNN
-F 1 "VCC" H 2867 1623 50  0000 C CNN
-F 2 "" H 2850 1450 50  0001 C CNN
-F 3 "" H 2850 1450 50  0001 C CNN
-	1    2850 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C3
-U 1 1 5CE7D11D
-P 2500 1600
-F 0 "C3" H 2615 1646 50  0000 L CNN
-F 1 "0.1uF" H 2615 1555 50  0000 L CNN
-F 2 "" H 2538 1450 50  0001 C CNN
-F 3 "~" H 2500 1600 50  0001 C CNN
-	1    2500 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C4
-U 1 1 5CE7DA9D
-P 2850 1600
-F 0 "C4" H 2965 1646 50  0000 L CNN
-F 1 "10uF" H 2965 1555 50  0000 L CNN
-F 2 "" H 2888 1450 50  0001 C CNN
-F 3 "~" H 2850 1600 50  0001 C CNN
-	1    2850 1600
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0108
-U 1 1 5CE8011B
-P 2500 1750
-F 0 "#PWR0108" H 2500 1500 50  0001 C CNN
-F 1 "GND" H 2505 1577 50  0000 C CNN
-F 2 "" H 2500 1750 50  0001 C CNN
-F 3 "" H 2500 1750 50  0001 C CNN
-	1    2500 1750
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0109
-U 1 1 5CE80AC7
-P 2850 1750
-F 0 "#PWR0109" H 2850 1500 50  0001 C CNN
-F 1 "GND" H 2855 1577 50  0000 C CNN
-F 2 "" H 2850 1750 50  0001 C CNN
-F 3 "" H 2850 1750 50  0001 C CNN
-	1    2850 1750
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	3000 2450 3200 2450
-Wire Wire Line
-	3200 2450 3200 2250
-$Comp
-L power:VCC #PWR0110
-U 1 1 5CE81FD1
-P 2650 4400
-F 0 "#PWR0110" H 2650 4250 50  0001 C CNN
-F 1 "VCC" H 2667 4573 50  0000 C CNN
-F 2 "" H 2650 4400 50  0001 C CNN
-F 3 "" H 2650 4400 50  0001 C CNN
-	1    2650 4400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0111
-U 1 1 5CE82B42
-P 5800 4250
-F 0 "#PWR0111" H 5800 4100 50  0001 C CNN
-F 1 "VCC" H 5817 4423 50  0000 C CNN
-F 2 "" H 5800 4250 50  0001 C CNN
-F 3 "" H 5800 4250 50  0001 C CNN
-	1    5800 4250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0112
-U 1 1 5CE85CE6
-P 3200 2250
-F 0 "#PWR0112" H 3200 2100 50  0001 C CNN
-F 1 "VCC" H 3217 2423 50  0000 C CNN
-F 2 "" H 3200 2250 50  0001 C CNN
-F 3 "" H 3200 2250 50  0001 C CNN
-	1    3200 2250
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2600 3050 2600 3100
-Wire Wire Line
-	2600 3100 2650 3100
-Wire Wire Line
-	2700 3100 2700 3050
-$Comp
-L power:GND #PWR0113
-U 1 1 5CE86915
-P 2650 3100
-F 0 "#PWR0113" H 2650 2850 50  0001 C CNN
-F 1 "GND" H 2655 2927 50  0000 C CNN
-F 2 "" H 2650 3100 50  0001 C CNN
-F 3 "" H 2650 3100 50  0001 C CNN
-	1    2650 3100
-	1    0    0    -1  
-$EndComp
-Connection ~ 2650 3100
-Wire Wire Line
-	2650 3100 2700 3100
-Wire Wire Line
-	5950 1650 5800 1650
-$Comp
-L power:VCC #PWR0114
-U 1 1 5CE9CD69
-P 6550 1400
-F 0 "#PWR0114" H 6550 1250 50  0001 C CNN
-F 1 "VCC" H 6567 1573 50  0000 C CNN
-F 2 "" H 6550 1400 50  0001 C CNN
-F 3 "" H 6550 1400 50  0001 C CNN
-	1    6550 1400
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0115
-U 1 1 5CE9C7DE
-P 5800 1500
-F 0 "#PWR0115" H 5800 1350 50  0001 C CNN
-F 1 "+3V3" H 5815 1673 50  0000 C CNN
-F 2 "" H 5800 1500 50  0001 C CNN
-F 3 "" H 5800 1500 50  0001 C CNN
-	1    5800 1500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5800 1650 5800 1500
-$Comp
-L Interface_USB:FT231XS U2
-U 1 1 5CE8700E
-P 6650 2250
-F 0 "U2" H 6650 3331 50  0000 C CNN
-F 1 "FT231XS" H 6650 3240 50  0000 C CNN
-F 2 "Package_SO:SSOP-20_3.9x8.7mm_P0.635mm" H 7250 1300 50  0001 C CNN
-F 3 "http://www.ftdichip.com/Products/ICs/FT231X.html" H 6650 2250 50  0001 C CNN
-	1    6650 2250
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+3V3 #PWR0116
-U 1 1 5CE9E489
-P 6750 1350
-F 0 "#PWR0116" H 6750 1200 50  0001 C CNN
-F 1 "+3V3" H 6765 1523 50  0000 C CNN
-F 2 "" H 6750 1350 50  0001 C CNN
-F 3 "" H 6750 1350 50  0001 C CNN
-	1    6750 1350
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 1950 5600 1950
-Wire Wire Line
-	4600 1950 4600 2150
-Wire Wire Line
-	5950 2050 5600 2050
-Wire Wire Line
-	5000 2050 5000 2150
-$Comp
-L Device:C C5
-U 1 1 5CEA2029
-P 4600 2300
-F 0 "C5" H 4715 2346 50  0000 L CNN
-F 1 "C" H 4715 2255 50  0000 L CNN
-F 2 "" H 4638 2150 50  0001 C CNN
-F 3 "~" H 4600 2300 50  0001 C CNN
-	1    4600 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C6
-U 1 1 5CEA2E0C
-P 5000 2300
-F 0 "C6" H 5115 2346 50  0000 L CNN
-F 1 "C" H 5115 2255 50  0000 L CNN
-F 2 "" H 5038 2150 50  0001 C CNN
-F 3 "~" H 5000 2300 50  0001 C CNN
-	1    5000 2300
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0117
-U 1 1 5CEA33EA
-P 5000 2450
-F 0 "#PWR0117" H 5000 2200 50  0001 C CNN
-F 1 "GND" H 5005 2277 50  0000 C CNN
-F 2 "" H 5000 2450 50  0001 C CNN
-F 3 "" H 5000 2450 50  0001 C CNN
-	1    5000 2450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0118
-U 1 1 5CEA3FDA
-P 4600 2450
-F 0 "#PWR0118" H 4600 2200 50  0001 C CNN
-F 1 "GND" H 4605 2277 50  0000 C CNN
-F 2 "" H 4600 2450 50  0001 C CNN
-F 3 "" H 4600 2450 50  0001 C CNN
-	1    4600 2450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	5950 2250 5850 2250
-$Comp
-L power:+3V3 #PWR0119
-U 1 1 5CEA4810
-P 5850 2250
-F 0 "#PWR0119" H 5850 2100 50  0001 C CNN
-F 1 "+3V3" V 5865 2378 50  0000 L CNN
-F 2 "" H 5850 2250 50  0001 C CNN
-F 3 "" H 5850 2250 50  0001 C CNN
-	1    5850 2250
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	6550 3150 6550 3250
-Wire Wire Line
-	6750 3250 6750 3150
-Wire Wire Line
-	6550 3250 6650 3250
-$Comp
-L power:GND #PWR0120
-U 1 1 5CEA63C2
-P 6650 3250
-F 0 "#PWR0120" H 6650 3000 50  0001 C CNN
-F 1 "GND" H 6655 3077 50  0000 C CNN
-F 2 "" H 6650 3250 50  0001 C CNN
-F 3 "" H 6650 3250 50  0001 C CNN
-	1    6650 3250
-	1    0    0    -1  
-$EndComp
-Connection ~ 6650 3250
-Wire Wire Line
-	6650 3250 6750 3250
-Text Label 3000 2650 0    50   ~ 0
-D+
-Text Label 3000 2750 0    50   ~ 0
-D-
-NoConn ~ 3000 2850
-$Comp
-L Device:R R5
-U 1 1 5CEA8289
-P 5450 1950
-F 0 "R5" V 5243 1950 50  0000 C CNN
-F 1 "R" V 5334 1950 50  0000 C CNN
-F 2 "" V 5380 1950 50  0001 C CNN
-F 3 "~" H 5450 1950 50  0001 C CNN
-	1    5450 1950
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5300 1950 4600 1950
-$Comp
-L Device:R R6
-U 1 1 5CEA898C
-P 5450 2050
-F 0 "R6" V 5243 2050 50  0000 C CNN
-F 1 "R" V 5334 2050 50  0000 C CNN
-F 2 "" V 5380 2050 50  0001 C CNN
-F 3 "~" H 5450 2050 50  0001 C CNN
-	1    5450 2050
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	5300 2050 5000 2050
-Text Label 5250 4600 0    50   ~ 0
-RXD
-Text Label 5250 4700 0    50   ~ 0
-TXD
-Text Label 7350 1650 0    50   ~ 0
-RXD
-Text Label 7350 1750 0    50   ~ 0
-TXD
-Wire Notes Line
-	1750 900  3850 900 
-Wire Notes Line
-	3850 900  3850 3800
-Wire Notes Line
-	3850 3800 1750 3800
-Wire Notes Line
-	1750 3800 1750 900 
-Wire Notes Line
-	3950 900  7850 900 
-Wire Notes Line
-	7850 900  7850 3800
-Wire Notes Line
-	7850 3800 3950 3800
-Wire Notes Line
-	3950 3800 3950 900 
-Wire Notes Line
-	1900 3950 7350 3950
-Wire Notes Line
-	7350 3950 7350 6200
-Wire Notes Line
-	7350 6200 1900 6200
-Wire Notes Line
-	1900 6200 1900 3950
-Wire Wire Line
-	4500 1950 4600 1950
-Connection ~ 4600 1950
-Wire Wire Line
-	5000 2050 4950 2050
-Connection ~ 5000 2050
-Text Label 4500 1950 0    50   ~ 0
-D-
-Text Label 4950 2050 0    50   ~ 0
-D+
 Text Notes 7000 6750 0    50   ~ 0
 Badge Pirates LLC
-Text Notes 2350 900  0    89   ~ 0
-USB INPUT
-Text Notes 5600 900  0    89   ~ 0
-FT231X IC
-Text Notes 4150 6200 0    89   ~ 0
+Wire Wire Line
+	5250 5000 6100 5000
+Text Notes 3250 7450 0    89   ~ 0
 ESP8266-12F
+Wire Notes Line
+	6450 7450 1000 7450
+Text Label 2250 4400 0    50   ~ 0
+VCC
+Text Label 6100 4300 0    50   ~ 0
+VCC
+$Comp
+L 430152070826:430152070826 S1
+U 1 1 5CE6DF3C
+P 6300 4800
+F 0 "S1" V 6346 4523 50  0000 R CNN
+F 1 "430152070826" V 6255 4523 50  0000 R CNN
+F 2 "digikey-kicad-library:Switch_Tactile_SMD_6x6mm" H 6300 4800 50  0001 L BNN
+F 3 "" H 6300 4800 50  0001 L BNN
+F 4 "None" H 6300 4800 50  0001 L BNN "Field4"
+F 5 "Unavailable" H 6300 4800 50  0001 L BNN "Field5"
+F 6 "Switch Tactile Spst-no 0.05A 12V" H 6300 4800 50  0001 L BNN "Field6"
+F 7 "None" H 6300 4800 50  0001 L BNN "Field7"
+F 8 "Wurth Electronics" H 6300 4800 50  0001 L BNN "Field8"
+	1    6300 4800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5CE3A4C5
+P 6100 4450
+F 0 "R3" V 5893 4450 50  0000 C CNN
+F 1 "10K" V 5984 4450 50  0000 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6030 4450 50  0001 C CNN
+F 3 "~" H 6100 4450 50  0001 C CNN
+	1    6100 4450
+	-1   0    0    1   
+$EndComp
+Connection ~ 6500 5000
+$Comp
+L Connector:Conn_01x05_Female J1
+U 1 1 5D2F25C1
+P 6650 5825
+F 0 "J1" H 6678 5851 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 6678 5760 50  0000 L CNN
+F 2 "digikey-kicad-library:PinHeader_1x5_P2.5mm_Drill1.1mm" H 6650 5825 50  0001 C CNN
+F 3 "~" H 6650 5825 50  0001 C CNN
+	1    6650 5825
+	1    0    0    -1  
+$EndComp
+Text Label 6450 5825 2    50   ~ 0
+VCC
+$Comp
+L power:GND #PWR0106
+U 1 1 5D2F72C4
+P 6450 5625
+F 0 "#PWR0106" H 6450 5375 50  0001 C CNN
+F 1 "GND" H 6455 5452 50  0000 C CNN
+F 2 "" H 6450 5625 50  0001 C CNN
+F 3 "" H 6450 5625 50  0001 C CNN
+	1    6450 5625
+	0    1    1    0   
+$EndComp
+Text Label 6450 5925 0    50   ~ 0
+tx
+Text Label 6450 6025 0    50   ~ 0
+rx
+Text Label 5250 4600 0    50   ~ 0
+tx
+Text Label 5250 4700 0    50   ~ 0
+rx
+NoConn ~ 6450 5725
+$Comp
+L Connector:Conn_01x05_Female J2
+U 1 1 5D30897C
+P 3225 3750
+F 0 "J2" H 3253 3776 50  0000 L CNN
+F 1 "Conn_01x05_Female" H 3253 3685 50  0000 L CNN
+F 2 "digikey-kicad-library:PinHeader_1x5_P2.5mm_Drill1.1mm" H 3225 3750 50  0001 C CNN
+F 3 "~" H 3225 3750 50  0001 C CNN
+	1    3225 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ESP8266-12E_ESP-12E:ESP8266-12F_ESP-12F U1
+U 1 1 5CE25A73
+P 4550 5200
+F 0 "U1" H 4550 6067 50  0000 C CNN
+F 1 "ESP8266-12F_ESP-12F" H 4550 5976 50  0000 C CNN
+F 2 "ESP8266-12E_ESP-12E:XCVR_ESP8266-12E%2fESP-12E" H 3850 4050 50  0001 L BNN
+F 3 "" H 4300 3800 50  0001 L BNN
+F 4 "None" H 4300 3800 50  0001 L BNN "Field4"
+F 5 "This WiFi module has a 32-bit MCU micro and clock speeds supporting 80 MHz or 160 MHz. Supports the RTOS and integrated Wi-Fi MAC/BB/RF/PA/LNA, and has an on-board antenna." H 750 3500 50  0001 L BNN "Field8"
+	1    4550 5200
+	1    0    0    -1  
+$EndComp
+Text Label 3025 3550 2    50   ~ 0
+ADC
+Text Label 3025 3650 2    50   ~ 0
+IO16
+Text Label 3025 3750 2    50   ~ 0
+IO14
+Text Label 3025 3850 2    50   ~ 0
+IO12
+Text Label 3025 3950 2    50   ~ 0
+IO13
+Text Label 3850 4700 2    50   ~ 0
+ADC
+Text Label 3850 4900 2    50   ~ 0
+IO16
+Text Label 3850 5000 2    50   ~ 0
+IO14
+Text Label 3850 5100 2    50   ~ 0
+IO12
+Text Label 3850 5200 2    50   ~ 0
+IO13
+$Comp
+L Connector:Conn_01x03_Female J4
+U 1 1 5D30CD7F
+P 5725 3675
+F 0 "J4" H 5753 3701 50  0000 L CNN
+F 1 "Conn_01x03_Female" H 5753 3610 50  0000 L CNN
+F 2 "digikey-kicad-library:PinHeader_1x3_P2.54_Drill1.1mm" H 5725 3675 50  0001 C CNN
+F 3 "~" H 5725 3675 50  0001 C CNN
+	1    5725 3675
+	1    0    0    -1  
+$EndComp
+Text Label 5525 3575 2    50   ~ 0
+IO5
+Text Label 5525 3675 2    50   ~ 0
+IO4
+Text Label 5525 3775 2    50   ~ 0
+IO2
+Text Label 5250 4800 0    50   ~ 0
+IO5
+Text Label 5250 4900 0    50   ~ 0
+IO4
+Text Label 5250 5100 0    50   ~ 0
+IO2
+Text Label 4300 5650 3    50   ~ 0
+CS0
+Text Label 4400 5650 3    50   ~ 0
+MISO
+Text Label 4500 5650 3    50   ~ 0
+IO9
+Text Label 4600 5650 3    50   ~ 0
+IO10
+Text Label 4700 5650 3    50   ~ 0
+MOSI
+Text Label 4800 5650 3    50   ~ 0
+SCLK
+$Comp
+L Connector:Conn_01x06_Female J3
+U 1 1 5D310AF4
+P 4600 6450
+F 0 "J3" V 4538 6062 50  0000 R CNN
+F 1 "Conn_01x06_Female" V 4447 6062 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 4600 6450 50  0001 C CNN
+F 3 "~" H 4600 6450 50  0001 C CNN
+	1    4600 6450
+	0    1    1    0   
+$EndComp
+Text Label 4300 6250 1    50   ~ 0
+CS0
+Text Label 4400 6250 1    50   ~ 0
+MISO
+Text Label 4500 6250 1    50   ~ 0
+IO9
+Text Label 4600 6250 1    50   ~ 0
+IO10
+Text Label 4700 6250 1    50   ~ 0
+MOSI
+Text Label 4800 6250 1    50   ~ 0
+SCLK
 $EndSCHEMATC
