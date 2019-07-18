@@ -25,11 +25,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="110.11716"
-     inkscape:cy="188.46473"
+     inkscape:zoom="3.959798"
+     inkscape:cx="102.4818"
+     inkscape:cy="299.96522"
      inkscape:document-units="mm"
-     inkscape:current-layer="g2529"
+     inkscape:current-layer="g2521"
      showgrid="true"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
@@ -53,7 +53,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -74,15 +74,11 @@
      id="g2521"
      inkscape:groupmode="layer"
      inkscape:label="Edge.Cuts"
-     style="display:none">
-    <rect
-       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
-       id="rect2549"
-       width="99.328819"
-       height="99.328819"
-       x="0.33559036"
-       y="0.33559036"
-       rx="0.48230696" />
+     style="display:inline">
+    <path
+       style="opacity:1;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.30000001;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
+       d="M 0.81789732,0.33559036 H 99.182103 c 0.267198,0 0.482307,0.21510891 0.482307,0.48230696 V 99.182103 c 0,0.267198 -0.215109,0.482307 -0.482307,0.482307 H 0.81789732 c -0.26719805,0 -0.48230696,-0.215109 -0.48230696,-0.482307 V 0.81789732 c 0,-0.26719805 0.21510891,-0.48230696 0.48230696,-0.48230696 z"
+       id="rect2549" />
   </g>
   <g
      id="g2523"
@@ -112,7 +108,7 @@
      id="g2529"
      inkscape:groupmode="layer"
      inkscape:label="F.Cu"
-     style="display:inline">
+     style="display:none">
     <rect
        style="display:inline;opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.098;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:normal"
        id="rect2558"
