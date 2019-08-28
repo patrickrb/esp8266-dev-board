@@ -1,4 +1,4 @@
-16513323827607200
+16516457388367548
 597-6001-607F
 LEDC3216X110N
 
@@ -13,6 +13,13 @@ WS-TSS-6x6 mm SMD Tact Switch,4 pins
 0
 4
 4
+AVR-ICSP
+AVR-ICSP
+AVR-ICSP
+CONN ICSP AVR
+0
+6
+6
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -53003,6 +53010,13 @@ Through hole angled pin header THT 2x02 2.54mm double row
 0
 4
 4
+my-ki-cad-parts
+ICSP_Attiny_Header
+Through hole straight pin header, 2x03, 1.00mm pitch, double rows
+Through hole pin header THT 2x03 1.00mm double row
+0
+6
+6
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
