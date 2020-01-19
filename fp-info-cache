@@ -1,4 +1,4 @@
-16516457388367548
+16505507072554098
 597-6001-607F
 LEDC3216X110N
 
@@ -13,13 +13,6 @@ WS-TSS-6x6 mm SMD Tact Switch,4 pins
 0
 4
 4
-AVR-ICSP
-AVR-ICSP
-AVR-ICSP
-CONN ICSP AVR
-0
-6
-6
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -286,20 +279,6 @@ battery CR-3032 coin cell vertical
 0
 2
 2
-BCAAPC
-MPD_BCAAPC
-
-
-0
-2
-2
-BSS138
-BSS138
-
-
-0
-3
-3
 Button_Switch_Keyboard
 SW_Cherry_MX_1.00u_PCB
 Cherry MX keyswitch, 1.00u, PCB mount, http://cherryamericas.com/wp-content/uploads/2014/12/mx_cat.pdf
@@ -5949,13 +5928,6 @@ C Rect series Radial pin pitch 37.50mm  length 41.5mm width 40mm Capacitor
 0
 2
 2
-CAY16-331J4LF
-RESCAXE80P320X160-8N
-<b>BOURNS RESISTOR NETWORK</b>
-
-0
-8
-8
 Connector
 Banana_Jack_1Pin
 Single banana socket, footprint - 6mm drill
@@ -42651,13 +42623,6 @@ FLIR_Lepton_Socket_1050281001
 68
 33
 digikey-kicad-library
-FTDI-ESP8266-programming-header
-http://www.jst-mfg.com/product/pdf/eng/eXH.pdf
-
-0
-5
-5
-digikey-kicad-library
 Gas_Sensor_110-109
 
 
@@ -53010,13 +52975,6 @@ Through hole angled pin header THT 2x02 2.54mm double row
 0
 4
 4
-my-ki-cad-parts
-ICSP_Attiny_Header
-Through hole straight pin header, 2x03, 1.00mm pitch, double rows
-Through hole pin header THT 2x03 1.00mm double row
-0
-6
-6
 NetTie
 NetTie-2_SMD_Pad0.5mm
 Net tie, 2 pin, 0.5mm square SMD pads
